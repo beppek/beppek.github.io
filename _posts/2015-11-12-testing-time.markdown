@@ -27,3 +27,6 @@ It wouldn't hurt to have a section on the course page with useful links, all of 
 That's where you'd find links to information on for example markdown, SASS, robots.txt, humans.txt and all other things related to this course - big or small.
 
 But for now I will just continue to dig out the information by myself, using random internet dudes as teachers. It seems to have worked well so far at least.
+
+*Edit: Since writing this post I saw that there were some links in the [description](https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/examination/exam-assignment-1/) for Examination 1.
+Still, it wouldn't hurt to give all the useful links a page where you just collect all of them.*
