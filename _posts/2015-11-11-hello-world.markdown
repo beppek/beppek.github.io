@@ -3,6 +3,7 @@ layout: post
 title:  "Hello World!"
 date:   2015-11-11 21:40:34
 categories: jekyll update
+comments: true
 ---
 The classic post everyone has to make the very first time they post something, a test post if you like. So I'm making one as well, why not right?
 

@@ -2,6 +2,7 @@
 layout: post
 title:  "Testing Time"
 date:   2015-11-12 23:14:34
+comments: true
 ---
 
 Since the first post was only really edited it's time for me to create my first post by myself.
