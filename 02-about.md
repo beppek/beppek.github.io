@@ -22,7 +22,9 @@ and computers were not a part of every man's daily life.
 Basically life was pretty shitty.
 
 These days I love to geek away. Programming has grown to be one of my main interests, photography has always been around leading to a deep interest in Photoshop.
-Of course I love to travel, I mean who doesn't? I just like to think I'm really cool since I mostly travel completely solo and make friends along the way.
+Of course I love to travel, I mean who doesn't? 
+I just like to think I'm really cool since I mostly travel completely solo and make friends along the way.
+But I'm obviously just full of myself.
 
 To stay fit I lace up my shoes, play some floorball and score some goals.
 
