@@ -24,7 +24,8 @@ body {
     padding-bottom:80px; /* Height of the footer element */
 }
 .site-footer {
-    width:100%;
+    width: -webkit-calc(100% - (#{$menu-width}));
+    width:         calc(100% - (#{$menu-width}));
     height:80px;
     position:absolute;
     bottom:0;
