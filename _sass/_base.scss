@@ -8,30 +8,6 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-/**
-* Keep the Footer down!
-* http://cssreset.com/how-to-keep-footer-at-bottom-of-page-with-css/
-*/
-html,
-body {
-    height:100%;
-}
-#pageWrapper {
-    min-height:100%;
-    position:relative;
-}
-.wrapper {
-    padding-bottom:80px; /* Height of the footer element */
-}
-.site-footer {
-    width: -webkit-calc(100% - (#{$menu-width}));
-    width:         calc(100% - (#{$menu-width}));
-    height:80px;
-    position:absolute;
-    bottom:0;
-    left:0;
-}
-
 
 
 /**
@@ -46,6 +22,8 @@ body {
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
+
+
 
 
 
