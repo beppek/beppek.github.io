@@ -43,10 +43,14 @@
         font-size: 18px;
         line-height: $base-line-height;
         display: block;
+        transition: color ease 0.2s;
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
             margin-top: 20px;
+        }
+        &:hover {
+            color: $hover-nav-color;
         }
     }
 
