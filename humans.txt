@@ -1,0 +1,15 @@
+/*TEAM*/
+Creator: Beppe Karlsson
+Contact: bk222bh@student.lnu.se
+From: Lagan, Sweden
+
+/*THANKS*/
+Name: Linnaeus University
+Link: www.lnu.se
+
+/*SITE*/
+Last update: 2015/11/13
+Language: English
+Standards: HTML5, CSS3,
+Components: Jekyll, SASS
+Software: Git, WebStorm, Illustrator, Photoshop

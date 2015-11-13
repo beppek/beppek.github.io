@@ -8,7 +8,6 @@
     top: 0;
     bottom: 0;
     background-color: $menu-background;
-    transition: width ease .5s;
 }
 
 .site-title {
@@ -248,6 +247,7 @@
 
 
 
+
 /**
 * Keep the Footer down!
 * http://cssreset.com/how-to-keep-footer-at-bottom-of-page-with-css/
@@ -258,7 +258,8 @@ body {
     height:         calc(100% - (#{$footer-height}) / 2);
 }
 #pageWrapper {
-    min-height:100%;
+    min-height: 100vh;
+    overflow: hidden;
     position:relative;
 }
 .site-footer {
