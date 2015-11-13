@@ -12,6 +12,9 @@ permalink: /blog/
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        
+        <p>{{ post.excerpt }}<a href="{{ post.url | prepend: site.baseurl }}">... Read More &#8594;</a></p>
+        
       </li>
     {% endfor %}
   </ul>
