@@ -17,7 +17,7 @@ There really was nothing to it, other than adding a couple of tags and the Disqu
 
 The advantage to using Disqus for comments is that lots of people already have a Disqus profile and it's a really easy setup.
 
-Too easy, like they say down under.
+Too easy - like they say down under.
 
 Right now the text is going to appear too bright to read as I've set it for a dark background in the Disqus settings.
 That might tell you something about my planned changes to the design of the page.
