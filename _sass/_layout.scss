@@ -2,12 +2,15 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    min-height: 100vh;
+    float: left;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
 
     // Positioning context for the mobile navigation icon
-    position: relative;
+    //position: relative;
 }
 
 .site-title {
@@ -24,8 +27,9 @@
 }
 
 .site-nav {
-    float: right;
-    line-height: 56px;
+    text-emphasis: after;
+    text-align: center;
+    line-height: 100vh;
 
     .menu-icon {
         display: none;
@@ -34,10 +38,11 @@
     .page-link {
         color: $text-color;
         line-height: $base-line-height;
+        display: block;
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
-            margin-left: 20px;
+            //margin-left: 20px;
         }
     }
 
@@ -92,8 +97,7 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding: $spacing-unit 0 $spacing-unit $menu-width;
 }
 
 .footer-heading {
@@ -162,7 +166,7 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0 200px;
+    padding: $spacing-unit 0 $footer-height $menu-width;
 }
 
 .page-heading {
@@ -180,7 +184,7 @@
 
 .post-meta {
     font-size: $small-font-size;
-    color: $grey-color;
+    color: $text-color;
 }
 
 .post-link {

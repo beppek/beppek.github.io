@@ -11,3 +11,5 @@ On this page I've gathered all the useful links that I found and used for this p
 [SASS](http://sass-lang.com/)
 
 [Jekyll](http://jekyllrb.com/)
+
+[Keeping the footer down](http://cssreset.com/how-to-keep-footer-at-bottom-of-page-with-css/)
