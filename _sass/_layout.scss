@@ -228,6 +228,21 @@
     display: block;
     font-size: 24px;
 }
+h2 .post-link {
+    color: darken($hover-nav-color, 20%);
+
+    &:hover {
+        color: $hover-nav-color;
+    }
+
+}
+p .read-more {
+    color: $text-color;
+
+    &:hover {
+        color: lighten($link-color, 45%);
+    }
+}
 
 
 
