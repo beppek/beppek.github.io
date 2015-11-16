@@ -4,6 +4,18 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Welcome to my playground!</h1>
+    <h1 class="page-heading">Welcome to my playground!</h1>
 
+    <p>This is where you can expect to find the most recent news with me, what I've been up to and what I've got planned for the future</p>
+    <p>The site will be updated some more in the weeks and months to come with new designs and functions.</p>
+    <p>On the highest order of priority is to create a page where I can display some of my photography. But that might have to wait until later this week  after the assignments need to be handed in.</p>
+    <p>Below you can find links to all the pages on this site.</p>
+    {% assign sorted_pages = site.pages | sort:"name" %}
+        {% for page in sorted_pages %}
+            {% unless page.exclude %}
+                {% if page.title %}
+                    <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                {% endif %}
+            {% endunless %}
+        {% endfor %}
 </div>
