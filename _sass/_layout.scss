@@ -191,6 +191,19 @@
     padding: $spacing-unit 0 $footer-height;
     max-width: 800px;
     margin: 50px auto 0;
+
+    @include media-query($on-palm) {
+        margin-left: $spacing-unit!important;
+    }
+
+    @include media-query($on-laptop) {
+        margin-right: $spacing-unit;
+    }
+
+    @include media-query($on-medium) {
+        margin-left: $menu-width * 2;
+    }
+
 }
 
 .page-heading {
