@@ -234,7 +234,7 @@
     font-size: 24px;
 }
 h2 .post-link {
-    color: darken($hover-nav-color, 10%);
+    color: $header-color;
 
     &:hover {
         color: $hover-nav-color;
