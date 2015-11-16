@@ -8,6 +8,14 @@
     top: 0;
     bottom: 0;
     background-color: $menu-background;
+
+    @include media-query($on-palm) {
+        width: 100%;
+        background-color: $link-color;
+        height: 60px;
+
+    }
+
 }
 
 .site-title {
@@ -22,6 +30,10 @@
     &,
     &:visited {
         color: $text-color;
+    }
+
+    @include media-query($on-palm) {
+        margin: 0 auto;
     }
 }
 
@@ -56,20 +68,18 @@
 
     @include media-query($on-palm) {
         position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
+        top: 35px;
+        right: 10px;
+        background-color: $link-color;
         border-radius: 5px;
-        text-align: right;
+        text-align: left;
 
         .menu-icon {
             display: block;
-            float: right;
-            width: 36px;
+            float: left;
+            width: 26px;
             height: 26px;
             line-height: 0;
-            padding-top: 10px;
             text-align: center;
 
             > svg {
@@ -89,7 +99,11 @@
 
         &:hover .trigger {
             display: block;
-            padding-bottom: 5px;
+            position: absolute;
+            top: 25px;
+            left: -55px;
+            padding: 5px 35px 10px;
+            background-color: $link-color;
         }
 
         .page-link {
@@ -175,7 +189,7 @@
  */
 .page-content {
     padding: $spacing-unit 0 $footer-height;
-    max-width: 900px;
+    max-width: 800px;
     margin: 50px auto 0;
 }
 
