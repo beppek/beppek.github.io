@@ -192,7 +192,7 @@
 .page-content {
     padding: $spacing-unit 0 $footer-height;
     max-width: 800px;
-    margin: 50px auto 0;
+    margin: 80px auto 0;
 
     @include media-query($on-palm) {
         margin-left: $spacing-unit!important;
@@ -218,6 +218,9 @@
 
     > li {
         margin-bottom: $spacing-unit;
+        background-color: $menu-background;
+        padding: $spacing-unit / 2;
+        position: relative;
     }
 }
 
@@ -231,67 +234,78 @@
     font-size: 24px;
 }
 h2 .post-link {
-    color: darken($hover-nav-color, 20%);
+    color: darken($hover-nav-color, 10%);
 
     &:hover {
         color: $hover-nav-color;
     }
 
 }
-p .read-more {
+p .post-excerpt {
     color: $text-color;
 
+    //&:hover {
+    //    color: lighten($link-color, 45%);
+    //}
+}
+p .read-more {
+    position: absolute;
+    bottom: -$base-line-height;
+    right: 0;
+    background-color: $menu-background;
+    padding: $spacing-unit / 10;
+
     &:hover {
-        color: lighten($link-color, 45%);
+        background-color: lighten($menu-background, 5%);
     }
 }
 
 
 
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
+    /**
+     * Posts
+     */
+    .post-header {
+        margin-bottom: $spacing-unit;
     }
-}
 
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
+    .post-title {
+        font-size: 42px;
+        letter-spacing: -1px;
+        line-height: 1;
 
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 36px;
         }
     }
 
-    h3 {
-        font-size: 26px;
+    .post-content {
+        margin-bottom: $spacing-unit;
 
-        @include media-query($on-laptop) {
-            font-size: 22px;
+        h2 {
+            font-size: 32px;
+
+            @include media-query($on-laptop) {
+                font-size: 28px;
+            }
+        }
+
+        h3 {
+            font-size: 26px;
+
+            @include media-query($on-laptop) {
+                font-size: 22px;
+            }
+        }
+
+        h4 {
+            font-size: 20px;
+
+            @include media-query($on-laptop) {
+                font-size: 18px;
+            }
         }
     }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}
 
 
 
@@ -318,3 +332,4 @@ body {
     bottom:0;
     left:0;
 }
+
