@@ -15,7 +15,7 @@ permalink: /blog/
         </h2>
         
         <p><a class="post-excerpt" href="{{ post.url | prepend: site.baseurl }}">{{ post.excerpt }}</a></p>
-        <p><a class="read-more" href="{{ post.url | prepend: site.baseurl }}">"... Read More &#8594;</a></p>
+        <p><a class="read-more" href="{{ post.url | prepend: site.baseurl }}">... Read More &#8594;</a></p>
         
       </li>
     {% endfor %}

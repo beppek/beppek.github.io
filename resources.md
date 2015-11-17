@@ -24,7 +24,7 @@ On this page I've gathered all the useful links that I found and used for this p
 + [Keeping the footer down](http://cssreset.com/how-to-keep-footer-at-bottom-of-page-with-css/)
 + [CSS Positioning](https://css-tricks.com/centering-css-complete-guide/)
 
-####Robots.txt \& Humans.txt
+####Robots.txt & Humans.txt
 
 + [Robots.txt](http://www.robotstxt.org/)
 + [Humans.txt](http://humanstxt.org/)
