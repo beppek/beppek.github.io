@@ -69,7 +69,7 @@
     @include media-query($on-palm) {
         position: absolute;
         top: $spacing-unit;
-        right: -$spacing-unit / 2;
+        right: -$spacing-unit;
         text-align: left;
 
         .menu-icon {
