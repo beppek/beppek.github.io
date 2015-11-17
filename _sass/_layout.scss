@@ -32,7 +32,7 @@
     }
 
     @include media-query($on-palm) {
-        margin: 0 auto 0 $spacing-unit;
+        margin: 0 auto 0;
     }
 }
 
@@ -69,7 +69,7 @@
     @include media-query($on-palm) {
         position: absolute;
         top: $spacing-unit;
-        right: -$spacing-unit * 1.5;
+        right: -$spacing-unit / 2;
         text-align: left;
 
         .menu-icon {
