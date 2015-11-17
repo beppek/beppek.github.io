@@ -11,9 +11,8 @@
 
     @include media-query($on-palm) {
         width: 100%;
-        background-color: $link-color;
         height: 60px;
-        position: absolute!important;
+        z-index: 2;
     }
 
 }
@@ -33,7 +32,7 @@
     }
 
     @include media-query($on-palm) {
-        margin: 0 auto;
+        margin: 0 auto 0 $spacing-unit;
     }
 }
 
@@ -69,23 +68,22 @@
 
     @include media-query($on-palm) {
         position: absolute;
-        top: 35px;
-        right: 10px;
-        background-color: $link-color;
-        border-radius: 5px;
+        top: $spacing-unit;
+        right: -$spacing-unit * 1.5;
         text-align: left;
 
         .menu-icon {
             display: block;
             float: left;
-            width: 26px;
-            height: 26px;
-            line-height: 0;
+            width: $spacing-unit;
+            height: $spacing-unit;
+            line-height: $spacing-unit;
+            line-height: $spacing-unit;
             text-align: center;
 
             > svg {
-                width: 18px;
-                height: 15px;
+                width: $spacing-unit;
+                height: $spacing-unit;
 
                 path {
                     fill: $grey-color-light;
@@ -102,15 +100,19 @@
         &:hover .trigger {
             display: block;
             position: absolute;
-            top: 25px;
-            left: -55px;
-            padding: 5px 35px 10px;
-            background-color: $link-color;
+            top: $spacing-unit;
+            left: -70px;
+            padding: 0 35px 10px;
+            background-color: $menu-background;
         }
 
         .page-link {
             display: block;
-            padding: 5px 10px;
+            padding: 5px 15px;
+
+            &:hover {
+                color: $link-color;
+            }
         }
     }
 }
