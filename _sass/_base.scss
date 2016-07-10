@@ -107,6 +107,10 @@ a {
     &:hover {
         color: $text-color;
     }
+
+    &:active {
+        color: $active-color;
+    }
 }
 
 

@@ -39,8 +39,7 @@
 .site-nav {
     text-emphasis: after;
     position: absolute;
-    top: -webkit-calc(50% - 56px);
-    top:         calc(50% - 56px);
+    top: 50%;
     transform: translateY(-50%);
     margin: 0 auto;
 
@@ -62,14 +61,18 @@
             margin-top: 20px;
         }
         &:hover {
-            color: $hover-nav-color;
+            color: lighten($active-color, 15%);
         }
+    }
+
+    .active-page {
+        color: $hover-nav-color;
     }
 
     @include media-query($on-palm) {
         position: absolute;
         top: $spacing-unit;
-        right: -$spacing-unit;
+        right: $spacing-unit;
         text-align: left;
 
         .menu-icon {
@@ -80,6 +83,7 @@
             line-height: $spacing-unit;
             line-height: $spacing-unit;
             text-align: center;
+            z-index: 3;
 
             > svg {
                 width: $spacing-unit;
@@ -192,12 +196,13 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0 $footer-height;
+    padding: $spacing-unit 0 0;
     max-width: 800px;
-    margin: 80px auto 0;
+    margin: 0 auto;
 
     @include media-query($on-palm) {
         margin-left: $spacing-unit!important;
+        margin-top: 60px;
     }
 
     @include media-query($on-laptop) {
@@ -246,9 +251,9 @@ h2 .post-link {
 p .post-excerpt {
     color: $text-color;
 
-    //&:hover {
-    //    color: lighten($link-color, 45%);
-    //}
+    // &:hover {
+    //    color: lighten($hover-nav-color, 45%);
+    // }
 }
 p .read-more {
     position: absolute;
@@ -259,6 +264,7 @@ p .read-more {
 
     &:hover {
         background-color: lighten($menu-background, 5%);
+        color: $hover-nav-color;
     }
 }
 
@@ -309,29 +315,42 @@ p .read-more {
         }
     }
 
+.image-container {
+     height: calc(100vh - #{$spacing-unit});
+     position: relative;
+ }
 
+ .image-container img {
+    display: block;
+    margin-top: -250px;
+    margin-left: -250px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+ }
 
 
 /**
 * Keep the Footer down!
 * http://cssreset.com/how-to-keep-footer-at-bottom-of-page-with-css/
 */
-html,
-body {
-    height: -webkit-calc(100% - (#{$footer-height}));
-    height:         calc(100% - (#{$footer-height}) / 2);
-}
-#pageWrapper {
-    min-height: 100vh;
-    overflow: hidden;
-    position:relative;
-}
-.site-footer {
-    width: -webkit-calc(100% - (#{$menu-width}));
-    width:         calc(100% - (#{$menu-width}));
-    height: $footer-height;
-    position:absolute;
-    bottom:0;
-    left:0;
-}
+// html,
+// body {
+//     height: -webkit-calc(100% - (#{$footer-height}));
+//     height:         calc(100% - (#{$footer-height}) / 2);
+// }
+// #pageWrapper {
+//     min-height: 100vh;
+//     overflow: hidden;
+//     position:relative;
+// }
+// .site-footer {
+//     width: -webkit-calc(100% - (#{$menu-width}));
+//     width:         calc(100% - (#{$menu-width}));
+//     height: $footer-height;
+//     position:absolute;
+//     bottom:0;
+//     left:0;
+// }
 
