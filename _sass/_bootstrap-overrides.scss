@@ -27,3 +27,10 @@
         transition: all 0.25s ease-in-out;
     }
 }
+
+/**
+* Panels
+*/
+.panel, .panel-primary, .panel-heading {
+    border-radius: 0;
+}

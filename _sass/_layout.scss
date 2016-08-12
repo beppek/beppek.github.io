@@ -66,7 +66,7 @@
     }
 
     .active-page {
-        color: $hover-nav-color;
+        background-color: $hover-nav-color;
         text-shadow: 2px 2px 3px rgba(25,25,25,0.5);
     }
 
@@ -225,9 +225,9 @@
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit;
+        // margin-bottom: $spacing-unit;
         background-color: $menu-background;
-        padding: $spacing-unit / 2;
+        // padding: $spacing-unit / 2;
         position: relative;
     }
 }
@@ -239,33 +239,38 @@
 
 .post-link {
     display: block;
-    font-size: 24px;
-}
-h2 .post-link {
-    color: $header-color;
-
+    font-size: 20px;
+    color: $text-color;
     &:hover {
-        color: $hover-nav-color;
+        text-decoration: none;
     }
+    &:visited {
+        color: $text-color;
+    }
+}
 
+h3 .post-link {
+    color: $header-color;
+    &:hover {
+        text-decoration: none;
+    }
 }
 p .post-excerpt {
     color: $text-color;
-
-    // &:hover {
-    //    color: lighten($hover-nav-color, 45%);
-    // }
 }
+
 p .read-more {
+    color: $text-color;
     position: absolute;
-    bottom: -$base-line-height;
+    bottom: 0;
     right: 0;
     background-color: $menu-background;
     padding: $spacing-unit / 10;
+    border-bottom: 1px solid #375a7f;
+    border-right: 1px solid #375a7f;
 
     &:hover {
-        background-color: lighten($menu-background, 5%);
-        color: $hover-nav-color;
+        text-decoration: none;
     }
 }
 
