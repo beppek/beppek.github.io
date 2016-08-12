@@ -17,8 +17,8 @@ $menu-width:       95px;
 
 $text-color:       rgb(210,210,210);
 $header-color:     lighten($text-color, 25%);
-$background-color: rgb(35,35,35);
-$menu-background:  lighten($background-color, 5%);
+$menu-background:  rgb(35,35,35);
+$background-color: lighten($menu-background, 5%);
 $menu-btn-hover:   #004a80;
 $brand-color:      #fdfdfd;
 $link-color:       #0FA0CE;

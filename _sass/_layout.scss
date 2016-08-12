@@ -18,22 +18,30 @@
 }
 
 .site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin: 20px $spacing-unit 0;
+    font-size: 18px;
+    // line-height: 56px;
+    // letter-spacing: -1px;
+    margin: 20px 0 0;
     text-align: center;
     float: left;
-    max-width: $menu-width;
+    width: calc(#{$menu-width} + #{$spacing-unit} * 2);
 
     &,
+    &:hover,
     &:visited {
         color: $text-color;
+        text-decoration: none;
     }
 
     @include media-query($on-palm) {
         margin: 0 auto 0;
     }
+
+}
+
+.site-title img {
+    max-width: $menu-width;
+    margin: 0 auto;
 }
 
 .site-nav {

@@ -19,6 +19,9 @@ body {
     line-height: $base-line-height;
     font-weight: 300;
     color: $text-color;
+    // background-image: url("../img/bg.jpg");
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
@@ -150,6 +153,9 @@ code {
 pre {
     padding: 8px 12px;
     overflow-x: auto;
+    color: $text-color;
+    border: none;
+    border-radius: 0;
 
     > code {
         border: 0;

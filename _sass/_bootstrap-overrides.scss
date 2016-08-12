@@ -34,3 +34,6 @@
 .panel, .panel-primary, .panel-heading {
     border-radius: 0;
 }
+.panel {
+    background-color: $menu-background;
+}
