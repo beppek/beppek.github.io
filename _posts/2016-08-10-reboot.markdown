@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Reboot the Site"
+date:   2016-08-10 21:15:24
+comments: true
+---
+After almost a year of very little activity (none) here on the blog I have decided to breathe new life into this project as I am in need of a portfolio. It is time to get serious.

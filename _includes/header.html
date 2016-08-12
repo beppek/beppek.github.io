@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/"><img src="/img/logo-mini.png" alt="logo"></a>
+    <a class="site-title" href="{{ site.baseurl }}/"><img src="/img/round.png" alt="logo"></a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -14,7 +14,6 @@
       </a>
 
       <div class="trigger">
-          <!--<a class="page-link" href="{{ site.baseurl }}/">Home</a>-->
         {% assign sorted_pages = site.pages | sort:"name" %}
         {% for node in sorted_pages %}
           {% unless node.exclude %}

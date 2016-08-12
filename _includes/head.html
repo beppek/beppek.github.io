@@ -10,8 +10,6 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!--<link rel="icon" type="image/png" href="http://beppek.github.io/img/jekyll.png" />-->
-
     <meta property="og:title" content="Beppe Karlsson" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://beppek.me/" />
@@ -20,7 +18,8 @@
 
     <link rel="icon" type="image/png" href="{{ '/img/favicon-32x32.png' | prepend: site.baseurl }}">
 
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/vendor/bootstrap.min.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link type="text/plain" rel="author" href="/humans.txt" />
 </head>

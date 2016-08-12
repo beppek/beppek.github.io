@@ -3,11 +3,11 @@ layout: page
 title: About
 permalink: /about/
 ---
-I'm a dude who happened to be born in Sweden in the first half of 1987.
+I was born in Sweden in the first half of 1987.
 The Berlin wall was still separating East from West,
 the internet was not a thing most people knew or cared about,
 and computers were not a part of every man's daily life.
-Basically, life was crap.
+Basically, life sucked.
 
 Good thing the internet boom of the 90's came to the rescue.
 I got to ride the wave early on as my dad worked in IT and we always had a computer at home,
