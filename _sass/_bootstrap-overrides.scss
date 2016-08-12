@@ -1,0 +1,21 @@
+/**
+* Button styles
+*/
+.btn, .btn-default {
+    border-width: 0;
+    border: 0;
+    border-radius: 1px;
+}
+
+.btn-block {
+    &:not(:first-child) {
+            margin-top: 0px;
+    }
+}
+
+.btn-no-bg {
+    background-color: rgba(25,25,25,0);
+    &:hover {
+        background-color: $menu-btn-hover;
+    }
+}

@@ -21,10 +21,10 @@
     font-size: 26px;
     line-height: 56px;
     letter-spacing: -1px;
-    margin: 20px auto 0;
+    margin: 20px $spacing-unit 0;
     text-align: center;
     float: left;
-    width: $menu-width;
+    max-width: $menu-width;
 
     &,
     &:visited {
@@ -49,7 +49,7 @@
 
     .page-link {
         text-align: center;
-        width: $menu-width;
+        width: calc(#{$menu-width} + #{$spacing-unit} * 2);
         color: $text-color;
         font-size: 18px;
         line-height: $base-line-height;
@@ -57,16 +57,17 @@
         transition: color ease 0.2s;
 
         // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-top: 20px;
-        }
-        &:hover {
-            color: lighten($active-color, 15%);
-        }
+        // &:not(:first-child) {
+        //     // margin-top: 20px;
+        // }
+        // &:hover {
+        //     color: lighten($active-color, 15%);
+        // }
     }
 
     .active-page {
         color: $hover-nav-color;
+        text-shadow: 2px 2px 3px rgba(25,25,25,0.5);
     }
 
     @include media-query($on-palm) {

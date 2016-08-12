@@ -13,12 +13,13 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 $footer-height:    80px;
-$menu-width:       65px;
+$menu-width:       95px;
 
 $text-color:       rgb(210,210,210);
 $header-color:     lighten($text-color, 25%);
 $background-color: rgb(35,35,35);
 $menu-background:  lighten($background-color, 5%);
+$menu-btn-hover:   #004a80;
 $brand-color:      #fdfdfd;
 $link-color:       #0FA0CE;
 $hover-nav-color:  #008076;
@@ -53,5 +54,6 @@ $on-medium:        1200px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "bootstrap-overrides"
 ;
