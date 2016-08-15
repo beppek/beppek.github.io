@@ -207,21 +207,21 @@
     padding: 0;
     // max-width: 800px;
     margin: 0 auto;
-    margin-left: calc(#{$menu-width} + #{$spacing-unit} * 2);
+    // margin-left: calc(#{$menu-width} + #{$spacing-unit} * 2);
 
     @media screen and (max-width: $on-palm) {
-        margin-left: $spacing-unit!important;
+        margin-left: 0!important;
         margin-top: 60px;
     }
 
-    @include media-query($on-laptop) {
-        margin-right: $spacing-unit;
-        margin-left: calc(#{$menu-width} * 2)!important;
+    @media screen and (min-width: $on-palm) {
+        // margin-right: $spacing-unit;
+        margin-left: calc(#{$menu-width} + #{$spacing-unit} * 2);
     }
 
-    @include media-query($on-medium) {
-        margin-left: calc(#{$menu-width} * 2)!important;
-    }
+    // @include media-query($on-medium) {
+    //     // margin-left: calc(#{$menu-width} * 2)!important;
+    // }
 
 }
 
@@ -290,6 +290,22 @@ p .read-more {
      */
     .post-header {
         margin-bottom: $spacing-unit;
+        text-align: center;
+    }
+
+    .post-header-container {
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(25,25,25,0.8);
+        padding: 35px 20px;
+        border-radius: 3px;
+    }
+
+    .post-header-container h6 {
+        margin: 0;
     }
 
     .post-title {
@@ -303,7 +319,7 @@ p .read-more {
     }
 
     .post-content {
-        margin-bottom: $spacing-unit;
+        margin: $spacing-unit;
 
         h2 {
             font-size: 32px;

@@ -10,11 +10,25 @@ layout: default
           background-image: url('{{page.image.feature}}');
           background-repeat: no-repeat;
           background-attachment: fixed;
+          background-size: cover;
+          height: 100vh;
+
+          @media screen and (max-width: 600px) {
+              height: calc(100vh - 60px)!important;
+          }
+
         }
       </style>
+
+    <div class="post-header-container">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <h6 class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</h6>
+    </div>
+    {% else %}
+      <h1 class="post-title">{{ page.title }}</h1>
+      <h6 class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</h6>
+    </div>
     {% endif %}
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
   <article class="post-content">
