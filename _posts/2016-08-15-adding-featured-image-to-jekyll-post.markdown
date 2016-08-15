@@ -21,18 +21,16 @@ comments: true
 Then all you need to do is adjust your html to display the image in all the places you would like it displayed like so:
 
 {% highlight html linenos %}
-    {% if page.image.feature %}
-        <style>
-            .post-header {
-                background-image: url('{{page.image.feature}}');
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: cover;
-            }
-        </style>
-    {% endif %}
+<style>
+    .post-header {
+        background-image: url('{{page.image.feature}}');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
 {% endhighlight %}
 
 Of course you change the html and css to match your own design.
 
-Next thing you do is completely break the design of your page and spend a couple of hours fixing what you wrecked. Not to mention messing the mobile version up even more.
+Next thing you do is completely break the design of your page and spend a couple of hours fixing what you wrecked. Not to mention messing the mobile version up even more. I still have a lot of work ahead of me before this site is updated to a good looking version, but I am slowly getting there, step by step.

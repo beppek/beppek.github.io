@@ -63,6 +63,8 @@
         line-height: $base-line-height;
         display: block;
         transition: color ease 0.2s;
+        letter-spacing: 3px;
+        font-weight: bold;
 
         // Gaps between nav items, but not on the first one
         // &:not(:first-child) {
@@ -321,6 +323,12 @@ p .read-more {
     .post-content {
         margin: $spacing-unit;
 
+        @media screen and (min-width: $on-laptop) {
+            max-width: 800px;
+            // margin-left: calc(#{$spacing-unit} * 2);
+            margin: 0 auto;
+        }
+
         h2 {
             font-size: 32px;
 
@@ -344,6 +352,10 @@ p .read-more {
                 font-size: 18px;
             }
         }
+    }
+
+    #disqus_thread {
+        margin-top: 100px;
     }
 
 .image-container {
