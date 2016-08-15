@@ -207,9 +207,9 @@
     padding: 0;
     // max-width: 800px;
     margin: 0 auto;
-    margin-left: calc(#{$menu-width} + #{$spacing-unit} * 2)!important;
+    margin-left: calc(#{$menu-width} + #{$spacing-unit} * 2);
 
-    @include media-query($on-palm) {
+    @media screen and (max-width: $on-palm) {
         margin-left: $spacing-unit!important;
         margin-top: 60px;
     }
