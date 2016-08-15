@@ -75,7 +75,6 @@
 
     .active-page {
         background-color: $hover-nav-color;
-        text-shadow: 2px 2px 3px rgba(25,25,25,0.5);
     }
 
     @include media-query($on-palm) {
@@ -205,9 +204,10 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0 0;
-    max-width: 800px;
+    padding: 0;
+    // max-width: 800px;
     margin: 0 auto;
+    margin-left: calc(#{$menu-width} + #{$spacing-unit} * 2)!important;
 
     @include media-query($on-palm) {
         margin-left: $spacing-unit!important;
@@ -216,10 +216,11 @@
 
     @include media-query($on-laptop) {
         margin-right: $spacing-unit;
+        margin-left: calc(#{$menu-width} * 2)!important;
     }
 
     @include media-query($on-medium) {
-        margin-left: $menu-width * 2;
+        margin-left: calc(#{$menu-width} * 2)!important;
     }
 
 }

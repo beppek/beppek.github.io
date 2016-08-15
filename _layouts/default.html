@@ -2,13 +2,13 @@
 <html>
 
   {% include head.html %}
-  {%if page.url == "/" %}
+  {% if page.url == "/" %}
   <style>
-  body {
-    background-image: url('./img/bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+    body {
+      background-image: url('./img/bg.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
   </style>
   {% endif %}
   <body>
