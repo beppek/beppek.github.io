@@ -237,9 +237,13 @@
 
     > li {
         // margin-bottom: $spacing-unit;
-        background-color: $menu-background;
+        // background-color: $menu-background;
         // padding: $spacing-unit / 2;
         position: relative;
+
+        &:first-child {
+            margin-top: $spacing-unit;
+        }
     }
 }
 
@@ -260,6 +264,12 @@
     }
 }
 
+.feed-feature-image {
+    margin-top: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 h3 .post-link {
     color: $header-color;
     &:hover {
@@ -275,10 +285,14 @@ p .read-more {
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: $menu-background;
+    // background-color: $menu-background;
     padding: $spacing-unit / 10;
-    border-bottom: 1px solid #375a7f;
-    border-right: 1px solid #375a7f;
+    // border-bottom: 1px solid #375a7f;
+    // border-right: 1px solid #375a7f;
+    // border-bottom: 1px solid #464545;
+    // border-right: 1px solid #464545;
+    margin-bottom: 1px;
+    margin-right: 1px;
 
     &:hover {
         text-decoration: none;
