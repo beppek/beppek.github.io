@@ -8,6 +8,12 @@
     top: 0;
     bottom: 0;
     background-color: $menu-background;
+    box-shadow: 1px 0 5px rgba(25,25,25,0.5);
+    width: calc(#{$menu-width} + #{$spacing-unit} * 2);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 
     @include media-query($on-palm) {
         width: 100%;
@@ -17,31 +23,83 @@
 
 }
 
+.open {
+    margin-left: 0;
+}
+
+.closed {
+    margin-left: calc(-#{$menu-width} - #{$spacing-unit} * 2);
+}
+
+.close-menu {
+    // text-align: center;
+}
+
+.close-menu a   {
+    color: $text-color;
+    background-color: $menu-btn-hover;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 50px;
+    height: 50px;
+    display: block;
+    padding-left: 20px;
+}
+.open-menu {
+    @extend .close-menu;
+    width: calc(#{$menu-width} + #{$spacing-unit} * 2);
+    position: fixed;
+    > a {
+        background-color: transparent;
+    }
+}
+
 .site-title {
-    font-size: 18px;
-    // line-height: 56px;
-    // letter-spacing: -1px;
-    margin: 20px 0 0;
+    font-size: 20px;
+    margin: -100px 0 40px;
     text-align: center;
-    float: left;
+    display: block;
     width: calc(#{$menu-width} + #{$spacing-unit} * 2);
 
-    &,
-    &:hover,
-    &:visited {
-        color: $text-color;
-        text-decoration: none;
+    > a:first-child {
+        display: block;
+        margin-bottom: 5px;
+    }
+    > a:not(:first-child) {
+        font-size: 35px;
+        margin-right: $spacing-unit;
+        transition: color 0.5s ease;
+        &,
+        &:hover {
+            text-decoration: none;
+            color: $link-color;
+        }
+    }
+    > a:last-child {
+        margin-right: 0;
     }
 
+    > a {
+
+        &,
+        &:hover {
+            text-decoration: none;
+            color: $link-color;
+        }
+        &,
+        &:visited {
+            color: $text-color;
+        }
+        > img {
+            max-width: calc((#{$menu-width} + #{$spacing-unit}) / 2);
+            margin: 0 auto;
+        }
+
+    }
     @include media-query($on-palm) {
         margin: 0 auto 0;
     }
 
-}
-
-.site-title img {
-    max-width: $menu-width;
-    margin: 0 auto;
 }
 
 .site-nav {
@@ -65,14 +123,6 @@
         transition: color ease 0.2s;
         letter-spacing: 3px;
         font-weight: bold;
-
-        // Gaps between nav items, but not on the first one
-        // &:not(:first-child) {
-        //     // margin-top: 20px;
-        // }
-        // &:hover {
-        //     color: lighten($active-color, 15%);
-        // }
     }
 
     .active-page {
@@ -207,9 +257,7 @@
  */
 .page-content {
     padding: 0;
-    // max-width: 800px;
     margin: 0 auto;
-    // margin-left: calc(#{$menu-width} + #{$spacing-unit} * 2);
 
     @media screen and (max-width: $on-palm) {
         margin-left: 0!important;
@@ -218,7 +266,7 @@
 
     @media screen and (min-width: $on-palm) {
         // margin-right: $spacing-unit;
-        margin-left: calc(#{$menu-width} + #{$spacing-unit} * 2);
+        // margin-left: calc(#{$menu-width} + #{$spacing-unit} * 2);
     }
 
     // @include media-query($on-medium) {
@@ -234,16 +282,11 @@
 .post-list {
     margin-left: 0;
     list-style: none;
+    padding-top: $spacing-unit;
 
     > li {
-        // margin-bottom: $spacing-unit;
-        // background-color: $menu-background;
-        // padding: $spacing-unit / 2;
         position: relative;
 
-        &:first-child {
-            margin-top: $spacing-unit;
-        }
     }
 }
 
@@ -285,12 +328,7 @@ p .read-more {
     position: absolute;
     bottom: 0;
     right: 0;
-    // background-color: $menu-background;
     padding: $spacing-unit / 10;
-    // border-bottom: 1px solid #375a7f;
-    // border-right: 1px solid #375a7f;
-    // border-bottom: 1px solid #464545;
-    // border-right: 1px solid #464545;
     margin-bottom: 1px;
     margin-right: 1px;
 
@@ -339,7 +377,6 @@ p .read-more {
 
         @media screen and (min-width: $on-laptop) {
             max-width: 800px;
-            // margin-left: calc(#{$spacing-unit} * 2);
             margin: 0 auto;
         }
 
@@ -378,7 +415,15 @@ p .read-more {
  }
 
  .bg-img {
-    margin: 10vh auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    text-align: center;
 }
 
 

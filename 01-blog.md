@@ -34,5 +34,5 @@ permalink: /blog/
     <br />
   {% endfor %}
 </ul>
-<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via <i class="fa fa-rss" aria-hidden="true"></i>RSS</a></p>
 
