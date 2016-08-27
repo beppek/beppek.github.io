@@ -2,6 +2,7 @@
 layout: page
 title: ToDo
 permalink: /todo/
+exclude: true
 ---
 Following is a todo list for this project. Items are unranked.
 

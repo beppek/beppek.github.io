@@ -31,8 +31,8 @@
     margin-left: calc(-#{$menu-width} - #{$spacing-unit} * 2);
 
     @include media-query($on-palm) {
-        margin-top: -100vh;
-        margin-left: 0;
+        // margin-top: -100vh;
+        margin-left: -100vw;
 
     }
 }
@@ -107,11 +107,14 @@
         > img {
             max-width: calc((#{$menu-width} + #{$spacing-unit}) / 2);
             margin: 0 auto;
+            @include media-query($on-palm) {
+                max-width: calc(100vw / 4);
+            }
         }
 
     }
     @include media-query($on-palm) {
-        margin: -50px auto 20px;
+        margin: 0 auto 20px;
     }
 
 }

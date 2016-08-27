@@ -8,12 +8,12 @@
 
 $(document).ready(function(){
 
-    console.log($(window).width());
+    console.log($(window).height());
 
+    console.log($(document).find("title").text());
 
-    if ($(window).width() <= 600) {
+    if ($(window).width() <= 600 && $(document).find("title").text() !== "Beppe Karlsson") {
         closeMenu();
-
     }
 
     $(".close-menu").click(function(e) {
