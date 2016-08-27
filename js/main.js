@@ -8,18 +8,36 @@
 
 $(document).ready(function(){
 
+    console.log($(window).width());
+
+
+    if ($(window).width() <= 600) {
+        closeMenu();
+
+    }
+
     $(".close-menu").click(function(e) {
-       e.preventDefault();
-       e.stopPropagation();
-       $(".open-menu").show();
-       $(".site-header").toggleClass("closed open");
+       closeMenu(e);
     });
 
     $(".open-menu").click(function(e) {
-       e.preventDefault();
-       e.stopPropagation();
-       $(".site-header").toggleClass("open closed");
-       $(".open-menu").hide();
+       openMenu(e);
     });
 
 });
+
+function closeMenu(e) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    // $(".open-menu").show();
+    $(".site-header").toggleClass("closed open");
+}
+
+function openMenu(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(".site-header").toggleClass("open closed");
+    // $(".open-menu").hide();
+}

@@ -23,7 +23,8 @@ $menu-btn-hover:   #004a80;
 $brand-color:      #fdfdfd;
 $link-color:       #0FA0CE;
 $hover-nav-color:  #008076;
-$active-color:     #80004a;
+$active-color:     darken(#80004a, 5%);
+$post-header-color: lighten($menu-btn-hover, 25%);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 50%);

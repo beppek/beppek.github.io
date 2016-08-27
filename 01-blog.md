@@ -10,7 +10,7 @@ permalink: /blog/
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
 
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 post-title-bar">
             <h3 class="panel-title">{{ post.title }}</h3>
             <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
           </div>
@@ -28,8 +28,9 @@ permalink: /blog/
           </div>
         </div>
       </a>
-      <p><a class="read-more" href="{{ post.url | prepend: site.baseurl }}">... Read More &#8594;</a></p>
+      <div class="read-more"><a class="btn btn-primary" href="{{ post.url | prepend: site.baseurl }}">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
     </li>
+    <br />
     <hr />
     <br />
   {% endfor %}

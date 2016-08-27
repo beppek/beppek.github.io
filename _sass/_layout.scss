@@ -6,7 +6,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    bottom: 0;
+    height: 100vh;
     background-color: $menu-background;
     box-shadow: 1px 0 5px rgba(25,25,25,0.5);
     width: calc(#{$menu-width} + #{$spacing-unit} * 2);
@@ -14,11 +14,11 @@
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+    z-index: 4;
 
     @include media-query($on-palm) {
         width: 100%;
-        height: 60px;
-        z-index: 2;
+        z-index: 4;
     }
 
 }
@@ -29,17 +29,26 @@
 
 .closed {
     margin-left: calc(-#{$menu-width} - #{$spacing-unit} * 2);
+
+    @include media-query($on-palm) {
+        margin-top: -100vh;
+        margin-left: 0;
+
+    }
 }
 
 .close-menu {
-    // text-align: center;
+    @include media-query($on-palm) {
+        text-align: center;
+
+    }
 }
 
 .close-menu a   {
     color: $text-color;
     background-color: $menu-btn-hover;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 50px;
     height: 50px;
     display: block;
@@ -48,7 +57,12 @@
 .open-menu {
     @extend .close-menu;
     width: calc(#{$menu-width} + #{$spacing-unit} * 2);
+    @include media-query($on-palm) {
+        width: 100%;
+        background-color: $menu-background;
+    }
     position: fixed;
+    z-index: 2;
     > a {
         background-color: transparent;
     }
@@ -97,7 +111,7 @@
 
     }
     @include media-query($on-palm) {
-        margin: 0 auto 0;
+        margin: -50px auto 20px;
     }
 
 }
@@ -130,53 +144,10 @@
     }
 
     @include media-query($on-palm) {
-        position: absolute;
-        top: $spacing-unit;
-        right: $spacing-unit;
-        text-align: left;
-
-        .menu-icon {
-            display: block;
-            float: left;
-            width: $spacing-unit;
-            height: $spacing-unit;
-            line-height: $spacing-unit;
-            line-height: $spacing-unit;
-            text-align: center;
-            z-index: 3;
-
-            > svg {
-                width: $spacing-unit;
-                height: $spacing-unit;
-
-                path {
-                    fill: $grey-color-light;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-            text-align: center;
-        }
-
-        &:hover .trigger {
-            display: block;
-            position: absolute;
-            top: $spacing-unit;
-            left: -70px;
-            padding: 15px 35px 10px;
-            background-color: $menu-background;
-        }
+        width: 100%;
 
         .page-link {
-            display: block;
-            padding: 5px 15px;
-
-            &:hover {
-                color: $link-color;
-            }
+            width: 100%;
         }
     }
 }
@@ -261,17 +232,7 @@
 
     @media screen and (max-width: $on-palm) {
         margin-left: 0!important;
-        margin-top: 60px;
     }
-
-    @media screen and (min-width: $on-palm) {
-        // margin-right: $spacing-unit;
-        // margin-left: calc(#{$menu-width} + #{$spacing-unit} * 2);
-    }
-
-    // @include media-query($on-medium) {
-    //     // margin-left: calc(#{$menu-width} * 2)!important;
-    // }
 
 }
 
@@ -282,7 +243,7 @@
 .post-list {
     margin-left: 0;
     list-style: none;
-    padding-top: $spacing-unit;
+    padding-top: calc(#{$spacing-unit} * 2);
 
     > li {
         position: relative;
@@ -308,9 +269,18 @@
 }
 
 .feed-feature-image {
-    margin-top: 8px;
+    margin-top: 7px;
     display: inline-block;
     vertical-align: middle;
+}
+
+.post-title-bar {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: calc(#{$spacing-unit} / 4);
+    padding-bottom: calc(#{$spacing-unit} / 4);
 }
 
 h3 .post-link {
@@ -323,18 +293,22 @@ p .post-excerpt {
     color: $text-color;
 }
 
-p .read-more {
-    color: $text-color;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: $spacing-unit / 10;
-    margin-bottom: 1px;
-    margin-right: 1px;
-
-    &:hover {
-        text-decoration: none;
+.read-more {
+    text-align: right;
+    > a {
+        color: $text-color;
+        &:hover {
+            text-decoration: none;
+        }
     }
+    // position: absolute;
+    // bottom: 0;
+    // right: 0;
+
+    // @include media-query($on-palm) {
+    //     position: relative;
+    // }
+
 }
 
 
@@ -373,10 +347,14 @@ p .read-more {
     }
 
     .post-content {
-        margin: $spacing-unit;
+        margin: 0 $spacing-unit;
 
         @media screen and (min-width: $on-laptop) {
             max-width: 800px;
+            margin: 0 auto;
+        }
+        @media screen and (min-width: $on-medium) {
+            max-width: 1200px;
             margin: 0 auto;
         }
 
