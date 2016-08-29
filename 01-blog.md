@@ -25,10 +25,10 @@ permalink: /blog/
           </div>
           <div class="col-md-6">
             {{ post.excerpt }}
+            <div class="read-more"><a class="btn btn-primary" href="{{ post.url | prepend: site.baseurl }}">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
           </div>
         </div>
       </a>
-      <div class="read-more"><a class="btn btn-primary" href="{{ post.url | prepend: site.baseurl }}">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
     </li>
     <br />
     <hr />

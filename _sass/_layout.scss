@@ -53,7 +53,7 @@
     height: 50px;
     display: block;
     @media screen and (min-width: $on-laptop) {
-        padding-left: $spacing-unit;
+        padding-left: calc(#{$spacing-unit} / 2);
         font-size: 40px;
     }
 }
@@ -300,7 +300,8 @@ p .post-excerpt {
 }
 
 .read-more {
-    text-align: right;
+    text-align: center;
+    margin-top: 20px;
     > a {
         color: $text-color;
         &:hover {
@@ -334,8 +335,14 @@ p .post-excerpt {
         top: 50%;
         transform: translateY(-50%);
         background-color: rgba(25,25,25,0.8);
-        padding: 35px 20px;
         border-radius: 3px;
+        @include media-query($on-palm) {
+            padding: 35px 30px;
+        }
+        @media screen and (min-width: $on-laptop) {
+            padding: 35px;
+            min-width: 500px;
+        }
     }
 
     .post-header-container h6 {
