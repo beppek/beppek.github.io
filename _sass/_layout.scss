@@ -31,7 +31,6 @@
     margin-left: calc(-#{$menu-width} - #{$spacing-unit} * 2);
 
     @include media-query($on-palm) {
-        // margin-top: -100vh;
         margin-left: -100vw;
 
     }
@@ -308,13 +307,6 @@ p .post-excerpt {
             text-decoration: none;
         }
     }
-    // position: absolute;
-    // bottom: 0;
-    // right: 0;
-
-    // @include media-query($on-palm) {
-    //     position: relative;
-    // }
 
 }
 
