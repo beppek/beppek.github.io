@@ -16,6 +16,8 @@ $(document).ready(function(){
         if ($(document).find("title").text() === "Beppe Karlsson") {
             $(".site-header").addClass("open");
         }
+    } else {
+        $(".site-header").addClass("open");
     }
 
     $(".close-menu").click(function(e) {
