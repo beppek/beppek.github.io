@@ -15,10 +15,12 @@ $spacing-unit:     30px;
 $footer-height:    80px;
 $menu-width:       200px;
 
-$text-color:       rgb(210,210,210);
-$header-color:     lighten($text-color, 25%);
+$text-color:       rgb(50,50,50);
+$menu-text-color:  rgb(230,230,230);
+$header-color:     lighten($text-color, 15%);
 $menu-background:  rgb(35,35,35);
-$background-color: lighten($menu-background, 5%);
+// $background-color: lighten($menu-background, 5%);
+$background-color: rgb(230,230,230);
 $menu-btn-hover:   #004a80;
 $brand-color:      #fdfdfd;
 $link-color:       #0FA0CE;

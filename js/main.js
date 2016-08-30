@@ -12,32 +12,35 @@ $(document).ready(function(){
 
     console.log($(document).find("title").text());
 
-    if ($(window).width() <= 600 && $(document).find("title").text() !== "Beppe Karlsson") {
-        closeMenu();
+    if ($(window).width() <= 600) {
+        if ($(document).find("title").text() === "Beppe Karlsson") {
+            $(".site-header").addClass("open");
+
+        } else {
+            $(".site-header").removeClass("open");
+        }
     }
 
     $(".close-menu").click(function(e) {
-       closeMenu(e);
+       toggleMenu(e);
     });
 
     $(".open-menu").click(function(e) {
-       openMenu(e);
+       toggleMenu(e);
     });
 
 });
 
-function closeMenu(e) {
+function toggleMenu(e) {
     if (e) {
         e.preventDefault();
         e.stopPropagation();
     }
-    // $(".open-menu").show();
-    $(".site-header").toggleClass("closed open");
+    $(".site-header").toggleClass("open closed");
 }
 
-function openMenu(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $(".site-header").toggleClass("open closed");
-    // $(".open-menu").hide();
-}
+// function openMenu(e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     $(".site-header").toggleClass("open closed");
+// }

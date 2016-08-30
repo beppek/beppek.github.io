@@ -10,21 +10,37 @@
     background-color: $menu-background;
     box-shadow: 1px 0 5px rgba(25,25,25,0.5);
     width: calc(#{$menu-width} + #{$spacing-unit} * 2);
+    z-index: 4;
+
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-    z-index: 4;
 
     @include media-query($on-palm) {
         width: 100%;
+        margin-left: -100vw;
         z-index: 4;
     }
 
 }
 
+.transition {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.no-transition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
 .open {
-    margin-left: 0;
+    margin-left: 0!important;
 }
 
 .closed {
@@ -44,7 +60,7 @@
 }
 
 .close-menu a   {
-    color: $text-color;
+    color: $menu-text-color;
     background-color: $menu-btn-hover;
     text-decoration: none;
     font-size: 30px;
@@ -59,20 +75,25 @@
 .open-menu {
     @extend .close-menu;
     width: calc(#{$menu-width} + #{$spacing-unit} * 2);
+    position: fixed;
+    z-index: 2;
+
     @include media-query($on-palm) {
         width: 100%;
         background-color: $menu-background;
     }
-    position: fixed;
-    z-index: 2;
+
     > a {
         background-color: transparent;
+        @media screen and(min-width: $on-palm) {
+            color: $text-color!important;
+        }
     }
 }
 
 .site-title {
     font-size: 20px;
-    margin: -100px 0 40px;
+    margin: -100px 0 20px;
     text-align: center;
     display: block;
     width: calc(#{$menu-width} + #{$spacing-unit} * 2);
@@ -96,6 +117,8 @@
     }
 
     > a {
+
+        color: $menu-text-color!important;
 
         &,
         &:hover {
@@ -135,7 +158,7 @@
     .page-link {
         text-align: center;
         width: calc(#{$menu-width} + #{$spacing-unit} * 2);
-        color: $text-color;
+        color: $menu-text-color;
         font-size: 18px;
         line-height: $base-line-height;
         display: block;
@@ -252,6 +275,12 @@
 
     > li {
         position: relative;
+        background-color: rgb(240,240,240);
+        padding: calc(#{$spacing-unit} / 2);
+
+        &:not(:first-child) {
+            margin-top: 35px;
+        }
 
     }
 }
@@ -302,7 +331,7 @@ p .post-excerpt {
     text-align: center;
     margin-top: 20px;
     > a {
-        color: $text-color;
+        color: $menu-text-color!important;
         &:hover {
             text-decoration: none;
         }

@@ -153,7 +153,7 @@ code {
 pre {
     padding: 8px 12px;
     overflow-x: auto;
-    color: $text-color;
+    color: darken($menu-text-color, 20%);
     border: none;
     border-radius: 0;
 
