@@ -275,7 +275,7 @@
 
     > li {
         position: relative;
-        background-color: rgb(240,240,240);
+        background-color: $text-background;
         padding: calc(#{$spacing-unit} / 2);
 
         &:not(:first-child) {
@@ -345,7 +345,7 @@ p .post-excerpt {
      * Posts
      */
     .post-header {
-        margin-bottom: $spacing-unit;
+        // margin-bottom: $spacing-unit;
         text-align: center;
     }
 

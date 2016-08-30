@@ -7,7 +7,7 @@ comments: true
 In this post I go a bit deeper in my description of my own personal experience working with the tools we've used for this assignment.
 This is a long post - I love to write - but it's got some pretty syntax highlighting as a reward for the reader who carries on to the end.
 
-####Precompiling CSS
+#### Precompiling CSS
 After having worked some more with SASS since my first blog post about it I stayed on the positive path.
 I find precompiling CSS to be really useful and the advantages way outweigh the disadvantages in my opinion.
 
@@ -33,7 +33,7 @@ On the other hand, when you start getting that many lines of CSS code it becomes
 
 I guess it really just depends on the project you're working on and what you prefer personally.
 
-####Static Site Generators
+#### Static Site Generators
 Static Site Generators, or SSG for short, are great for quickly putting up a static site.
 IT does involve a bit of initial setup but once that is done you quickly gain that time.
 If all you need is some info and maybe a blog - then a database is too much of a burden, both in resources and security.
@@ -49,7 +49,7 @@ It's also a really quick and easy way to spit out several pages, and posts, in a
 
 Basically SSGs follow the DRY principle really well and allows one to be more productive.
 
-####Robots.txt
+#### Robots.txt
 Robots.txt is a simple text file that contains information for robots,
 crawlers, spiders or whatever you personally prefer to call them.
 
@@ -68,7 +68,7 @@ that's why I make no exceptions.
 
 Later on as the site is ready to be indexed I will lift the ban for those crawlers by changing the configuration.
 
-####Humans.txt
+#### Humans.txt
 Humans.txt is for humans! Basically it's a place to put information about the team behind the site.
 You can kinda compare it to the end credits of a movie or a game,
 combined with the forewords to a book, a place for the author to thank whoever made whatever he wrote possible.
@@ -96,7 +96,7 @@ Powered by: Caffeine
 
 {% endhighlight %}
 
-####Blog Comments
+#### Blog Comments
 On this site I use a Disqus integration to allow for comments on my posts.
 The setup was really simple, it's not harder than a case of copy and paste.
 I already had an old Disqus account so I just created a new handler and had to change the shortname in the integration code,
@@ -138,7 +138,7 @@ so you can view the disqus integration code below:
 
 Now wasn't that pretty? You can even scroll to see more when the code is too long.
 
-####Open Graph
+#### Open Graph
 These days social media is really important to websites, and then of course it helps to make your site easier - and nicer - to share.
 
 Open Graph is a tool that enables you to set the information that will be displayed by social media when a link to your site is posted.
@@ -160,7 +160,7 @@ At the moment it's not that important,
 but it is something I will look into when I want the site to start being shared here and there.
 The image I'm using is hideous, I know, it's on my to do list.
 
-####Summary
+#### Summary
 This was a longer post,
 but just look at how beautiful it looks with the syntax highlighting thanks to Jekyll and liquid
 (and my own minor changes to the styling).
