@@ -2,7 +2,7 @@
  * This is the starting point for application
  * @author: beppek
  * @version: 0.1
-*/
+ * */
 
 "use strict";
 
@@ -15,9 +15,6 @@ $(document).ready(function(){
     if ($(window).width() <= 600) {
         if ($(document).find("title").text() === "Beppe Karlsson") {
             $(".site-header").addClass("open");
-
-        } else {
-            $(".site-header").removeClass("open");
         }
     }
 
@@ -31,16 +28,21 @@ $(document).ready(function(){
 
 });
 
+/**
+ * This function toggles the menu
+ * @param e - Event parameter
+ * */
 function toggleMenu(e) {
     if (e) {
         e.preventDefault();
         e.stopPropagation();
     }
-    $(".site-header").toggleClass("open closed");
-}
 
-// function openMenu(e) {
-//     e.preventDefault();
-//     e.stopPropagation();
-//     $(".site-header").toggleClass("open closed");
-// }
+    if ($(".site-header").hasClass("open")) {
+        $(".site-header").removeClass("open");
+        $(".site-header").addClass("closed");
+    } else {
+        $(".site-header").removeClass("closed");
+        $(".site-header").addClass("open");
+    }
+}

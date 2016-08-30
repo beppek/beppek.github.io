@@ -3,12 +3,18 @@
 
   {% include head.html %}
   {% if page.url == "/" %}
-  <style>
+  <style scoped>
     body {
       background-image: url('./img/bg.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
+    }
+
+    @media screen and (max-width: 600px) {
+      .site-header {
+        margin-left: 0;
+      }
     }
   </style>
   {% endif %}
