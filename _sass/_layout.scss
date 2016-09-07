@@ -381,7 +381,8 @@ p .post-excerpt {
     }
 
     .post-content {
-        margin: 0 $spacing-unit;
+        // margin: 0 $spacing-unit;
+        padding: 30px;
 
         @media screen and (min-width: $on-laptop) {
             max-width: 800px;

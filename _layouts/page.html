@@ -4,8 +4,47 @@ layout: default
 <div class="post">
 
 {% if page.title != "Blog" %}
-  <header class="post-header">
+  <!--<header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
+  </header>-->
+  <header class="post-header">
+    {% if page.image.feature %}
+      <style>
+        .post-header {
+          background-image: url('/img/feature/{{page.image.feature}}');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          height: 50vh;
+
+          @media screen and (max-width: 600px) {
+              height: calc(100vh - 60px)!important;
+          }
+
+        }
+        .post-title, .post-meta {
+          color: rgb(210,210,210);
+        }
+        .post-content {
+            background-color: #efeeee;
+        }
+      </style>
+
+    <div class="post-header-container">
+      <h1 class="post-title">{{ page.title }}</h1>
+    </div>
+    {% else %}
+      <style>
+        .post-title {
+          padding-top: 60px;
+        }
+        .post-content {
+            background-color: #efeeee;
+        }
+      </style>
+      <h1 class="post-title">{{ page.title }}</h1>
+    </div>
+    {% endif %}
   </header>
 {% endif %}
 
