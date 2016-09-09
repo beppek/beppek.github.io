@@ -12,4 +12,4 @@ permalink: /portfolio/
 
 ### Backpack Vagabond
 
-<a href="http://backpackvagabond.com" target="_blank">![Backpack Vagabond](/img/portfolio/pwd.jpg "Backpack Vagabond")</a>
+<a href="http://backpackvagabond.com" target="_blank">![Backpack Vagabond](/img/portfolio/backpackvagabond.jpg "Backpack Vagabond")</a>
